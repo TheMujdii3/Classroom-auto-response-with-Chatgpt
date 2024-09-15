@@ -18,22 +18,12 @@ SCOPES = [
 
 TOKEN_DIR = './'
 client = OpenAI(
-    api_key="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")
-OpenAI.api_key = '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'
+    api_key="your openai key")
+OpenAI.api_key = 'your openai key'
 
 
 def get_classroom_service(email, creds_json_path='credentials.json'):
-    """
-    Returns an authorized Google Classroom API service for a specific user based on their email.
-
-    Parameters:
-        email (str): The email of the user (used to identify the token file).
-        creds_json_path (str): Path to the credentials.json file from Google Cloud.
-
-    Returns:
-        service: Google Classroom API service object.
-    """
-
+   
     # Path to the token file for this specific user
     token_file_path = os.path.join(TOKEN_DIR, f'{email}_token.json')
 
@@ -59,15 +49,7 @@ def get_classroom_service(email, creds_json_path='credentials.json'):
 
 
 def get_drive_service(creds_json_path='credentials.json'):
-    """
-    Returns an authorized Google Drive API service.
-
-    Parameters:
-        creds_json_path (str): Path to the credentials.json file from Google Cloud.
-
-    Returns:
-        service: Google Drive API service object.
-    """
+  
     flow = InstalledAppFlow.from_client_secrets_file(creds_json_path, SCOPES)
     creds = flow.run_local_server(port=0)
     service = build('drive', 'v3', credentials=creds)
@@ -287,7 +269,7 @@ def process_users(email_list):
 
 # Example email list
 email_list = ['andreineculai70@gmail.com']
-
+#made by th3mujd11 now only me and god know what i ve dont here in a month probably only god will know what this code does:))
 # Run the processing for all users in the email list
 if __name__ == '__main__':
     process_users(email_list)
