@@ -268,7 +268,7 @@ def process_users(email_list):
 
 
 # Example email list
-email_list = ['andreineculai70@gmail.com']
+email_list = ['your student email']
 #made by th3mujd11 now only me and god know what i ve dont here in a month probably only god will know what this code does:))
 # Run the processing for all users in the email list
 if __name__ == '__main__':
