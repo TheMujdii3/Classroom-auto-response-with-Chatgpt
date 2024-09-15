@@ -9,4 +9,6 @@
 
 5.download secrets file and put it in the code directory and rename it credentials.json
 
+6.put your student email
+
 Enjoy it:)
